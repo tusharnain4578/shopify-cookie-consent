@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "f544cefb85bb6ad0147c1bdba147d760"
+name = "cookie-consent-99"
+handle = "cookie-consent-99"
+application_url = "https://hans-peaceful-vertex-annual.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-3dcf1f7d.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://hans-peaceful-vertex-annual.trycloudflare.com/auth/callback",
+  "https://hans-peaceful-vertex-annual.trycloudflare.com/auth/shopify/callback",
+  "https://hans-peaceful-vertex-annual.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks"
+
+[pos]
+embedded = false

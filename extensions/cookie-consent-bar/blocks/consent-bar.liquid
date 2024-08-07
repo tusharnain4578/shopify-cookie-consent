@@ -1,0 +1,34 @@
+<link href="{{ 'style.css' | asset_url }}" rel="stylesheet" />
+<script src="{{ 'script.js' | asset_url }}" ></script>
+
+
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+    <div class="wrapper tsweb-ck-ctr-hidden" id="tsweb-ck-ctr">
+      <header>
+        <i class="bx bx-cookie"></i>
+        <h2>Cookies Consent</h2>
+      </header>
+
+      <div class="data">
+        <p>This website use cookies to help you have a superior and more relevant browsing experience on the website.</p>
+      </div>
+
+      <div class="buttons">
+        <button class="button" id="tsweb_ck_accept"></button>
+        <button class="button" id="tsweb_ck_decline"></button>
+      </div>
+    </div>
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Cookie Consent Bar",
+  "target": "section"
+}
+{% endschema %}
+
